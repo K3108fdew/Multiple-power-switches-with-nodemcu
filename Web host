@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src="jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>On and off</h1>
+    <input id="3" type="button" value="Lin" onclick="Knapp(this.id);">
+    <input id="2" type="button" value="Win" onclick="Knapp(this.id);">
+    <input id="1" type="button" value="Av" onclick="Knapp(this.id);">
+    
+    <form id="Fisk" action="http://84.208.165.3/" method="get">
+      <div>
+        <input id="Modus" name="Modus" value="">
+      </div>
+    </form>
+    <script>
+      var Status = 0;
+    </script>
+    <script type="text/javascript">
+    function Knapp(id){
+        if(Status == 0){
+            Status++;
+            document.getElementById("Modus").value = id;
+            document.getElementById("Fisk").submit();
+        }
+        else{
+            Status--;
+        }
+      }
+    </script>
+  </body>
+</html>
